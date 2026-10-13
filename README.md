@@ -10,12 +10,9 @@ The [console guide](docs/console.md) walks through the index, the object file, a
 
 ## Install
 
-Packagist does not host these packages. Composer does not read repositories from a dependency, so an application has to register each GitHub repository itself:
+Install [kschroeder/spaced-tracker-ui](https://packagist.org/packages/kschroeder/spaced-tracker-ui) from Packagist. Composer installs `kschroeder/spaced-tracker-api` and `kschroeder/spaced-tracker` from Packagist as well:
 
 ```bash
-composer config repositories.spaced-tracker vcs https://github.com/kschroeder/spaced-tracker
-composer config repositories.spaced-tracker-api vcs https://github.com/kschroeder/spaced-tracker-api
-composer config repositories.spaced-tracker-ui vcs https://github.com/kschroeder/spaced-tracker-ui
 composer require kschroeder/spaced-tracker-ui:^1.0
 ```
 
@@ -30,7 +27,7 @@ npm run build
 
 `npm run build` writes the console to `public/app/`. That directory is generated. Commit the Vue source, not the build.
 
-The PHP package depends on `kschroeder/spaced-tracker-api`, which depends on `kschroeder/spaced-tracker`, and on `vlucas/phpdotenv` and `symfony/http-client`. The HTTP client is what live mode uses to call Space-Track. `composer.json` fetches the two Spaced Tracker packages from GitHub. Replace those repository entries with path repositories of `../spaced-tracker` and `../spaced-tracker-api` when Composer should symlink neighboring checkouts instead.
+The PHP package depends on `kschroeder/spaced-tracker-api`, which depends on `kschroeder/spaced-tracker`, and on `vlucas/phpdotenv` and `symfony/http-client`. The HTTP client is what live mode uses to call Space-Track. This checkout's `composer.json` fetches the two Spaced Tracker packages from GitHub. Replace those repository entries with path repositories of `../spaced-tracker` and `../spaced-tracker-api` when Composer should symlink neighboring checkouts instead.
 
 ## Run it
 
