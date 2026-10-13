@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "target": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "checkJs": false,
+        "jsx": "preserve"
+    },
+    "include": [
+        "src/**/*",
+        "vite.config.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "../public/app"
+    ]
+}

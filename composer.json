@@ -1,0 +1,49 @@
+{
+    "name": "kschroeder/spaced-tracker-ui",
+    "description": "CRT catalog console for the Spaced Tracker API. Runs standalone, behind a web server, or on the PHP built-in server.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.2",
+        "kschroeder/spaced-tracker-api": "^1.0",
+        "symfony/http-client": "^7.1 || ^8.0",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.5",
+        "squizlabs/php_codesniffer": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpacedTracker\\Ui\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SpacedTracker\\Ui\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/spaced-tracker-ui"
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "cs": "phpcs",
+        "stan": "phpstan analyse --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/kschroeder/spaced-tracker"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kschroeder/spaced-tracker-api"
+        }
+    ]
+}
