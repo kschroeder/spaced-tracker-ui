@@ -16,10 +16,10 @@ Install [kschroeder/spaced-tracker-ui](https://packagist.org/packages/kschroeder
 composer require kschroeder/spaced-tracker-ui:^1.0
 ```
 
-To work on this repository:
+To work on this repository, which has no lock file:
 
 ```bash
-composer install
+composer update
 cd frontend
 npm install
 npm run build
